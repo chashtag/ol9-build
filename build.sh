@@ -15,7 +15,7 @@ function download () {
 }
 
 if [[ -z "$ISO" ]];then
-    URL="https://yum.oracle.com/ISOS/OracleLinux/OL9/u5/x86_64/OracleLinux-R9-U5-x86_64-boot-uek.iso"
+    ISO="https://yum.oracle.com/ISOS/OracleLinux/OL9/u5/x86_64/OracleLinux-R9-U5-x86_64-boot-uek.iso"
 fi
 
 if [[ -z "$KS" ]];then
