@@ -23,7 +23,7 @@ if [[ -z "$KS" ]];then
 fi
 
 
-for dl in $ISO $KS;do
+for dl in $ISO $KS ;do
     download $dl
 done
 
