@@ -41,10 +41,12 @@ virt-install \
   --vcpus 2 \
   --boot uefi \
   --os-variant ol9-unknown \
+  --graphics none \
   --disk size=200,format=qcow2 \
   --location ${PWD}/$(basename $ISO),initrd=images/pxeboot/initrd.img,kernel=images/pxeboot/vmlinuz \
   --cdrom ${PWD}/$(basename $ISO) \
   --initrd-inject=${PWD}/$(basename $KS) \
-  --extra-args "inst.ks=file:/$(basename $KS) inst.repo=cdrom" \
+  --extra-args "inst.ks=file:/$(basename $KS) inst.repo=cdrom console=ttyS0" \
+  --wait -1 \
   --transient \
-  --destroy-on-exit 
+  --destroy-on-exit
