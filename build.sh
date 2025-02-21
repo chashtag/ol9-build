@@ -42,7 +42,7 @@ virt-install \
   --boot uefi \
   --os-variant ol9-unknown \
   --graphics none \
-  --disk size=200,format=qcow2 \
+  --disk /build/disk.qcow2,size=200,format=qcow2 \
   --location ${PWD}/$(basename $ISO),initrd=images/pxeboot/initrd.img,kernel=images/pxeboot/vmlinuz \
   --cdrom ${PWD}/$(basename $ISO) \
   --initrd-inject=${PWD}/$(basename $KS) \
