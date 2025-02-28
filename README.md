@@ -19,6 +19,6 @@ or in podman
 ```
 mkdir -p output 
 
-podman run --rm -ti -v $PWD/output:/build:z --device /dev/kvm docker.io/chashtag/virt-install:latest bash -c 'bash <(curl -s https://raw.githubusercontent.com/chashtag/ol9-build/refs/heads/main/build.sh)'
+mkdir -p output && podman run --rm -ti -v $PWD/output:/build:U,z --device /dev/kvm docker.io/chashtag/virt-install:latest bash -c 'bash <(curl -s https://raw.githubusercontent.com/chashtag/ol9-build/refs/heads/main/build.sh)'
 
 ```

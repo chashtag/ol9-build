@@ -6,7 +6,7 @@ function download () {
         elif command -v wget 2>&1 >/dev/null; then
             wget $1
         elif command -v curl 2>&1 >/dev/null; then
-            curl -JLOSs $1
+            curl -JLO $1
         else
             echo "Missing something to download with, aria2c, wget, curl??"
             exit 1
